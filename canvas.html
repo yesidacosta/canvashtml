@@ -10,8 +10,8 @@
 
 <body>
     <h2>Canvas</h2>
-    <canvas id="lienzo" width="200" height="600" style="border:1px solid #d3d3d3;">
-
+    <canvas id="lienzo" width="200" height="500" style="border:1px solid #d3d3d3;">
+        
     </canvas>
 
     <script>
@@ -19,17 +19,45 @@
         let ctx = $canvas.getContext("2d");
 
         ctx.beginPath();
+    
         ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-        
+
+        ctx.moveTo(100, 100);
+
         ctx.moveTo(95,90);
         ctx.lineTo(95,300);
 
-        ctx.stroke();
+        ctx.moveTo(25,130);
+        ctx.lineTo(20,160);
 
         ctx.moveTo(25,130);
         ctx.lineTo(160,130);
-        ctx.stroke();
+                
+        ctx.moveTo(160,130);
+        ctx.lineTo(170,90);
 
+        ctx.moveTo(95,300);
+        ctx.lineTo(150,450);
+
+
+        ctx.moveTo(95,300);
+        ctx.lineTo(20, 450);
+
+        ctx.moveTo(20,450);
+        ctx.lineTo(00, 450);
+        
+        ctx.moveTo(150,450);
+        ctx.lineTo(180, 450);
+
+        ctx.stroke();
+        ctx.fillText("UDENAR", 70, 480);
+
+        
+
+
+        
+        
+        
     </script>
 </body>
 
