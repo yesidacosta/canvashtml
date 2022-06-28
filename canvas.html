@@ -6,23 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Century gothic';
+        }
+
+        .contenedor-lienzo {
+            display: inline-block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
     <h2>Canvas</h2>
-    <canvas id="lienzo" width="200" height="500" style="border:1px solid #d3d3d3;">
-        
-    </canvas>
+    <div class="contenedor-lienzo">
+        <canvas id="lienzo" width="500" height="500" style="border:6px solid #d3d3d3;">
+
+        </canvas>
+    </div>
 
     <script>
         let $canvas = document.getElementById("lienzo");
         let ctx = $canvas.getContext("2d");
-
         ctx.beginPath();
-    
-        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
 
-        ctx.moveTo(100, 100);
+
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ;
+        
+        ctx.moveTo(90,40);
+        ctx.arc(80, 40, 10, 0, 2 * Math.PI);
+
+        ctx.moveTo(120,40);
+        ctx.arc(110, 40, 10, 0, 2 * Math.PI);
+
+        ctx.moveTo(105,70);
+        ctx.arc(95,70, 10, 0, 1 * Math.PI);
+        
+        
+
 
         ctx.moveTo(95,90);
         ctx.lineTo(95,300);
@@ -32,7 +56,7 @@
 
         ctx.moveTo(25,130);
         ctx.lineTo(160,130);
-                
+
         ctx.moveTo(160,130);
         ctx.lineTo(170,90);
 
@@ -45,19 +69,19 @@
 
         ctx.moveTo(20,450);
         ctx.lineTo(00, 450);
-        
+
         ctx.moveTo(150,450);
         ctx.lineTo(180, 450);
 
         ctx.stroke();
         ctx.fillText("UDENAR", 70, 480);
 
-        
 
 
-        
-        
-        
+
+
+
+
     </script>
 </body>
 
